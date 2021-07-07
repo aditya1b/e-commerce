@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Cart|shoeOG's</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="Z:\Web Dev\e-commerce\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600;700&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+  <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"><img src="images/logo2.png" alt="logo" width="125px"></div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">S-World</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Coming Soon!</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/cart.png" width="20px" height="20px" >
+            <img src="images/menu.png" class="menu-icon" onclick="menuToggle()">
+        </div>
+    </div>
+  </div>
+   <!---Cart-item-->
+   <div class="small-container cart">
+       <table>
+           <tr>
+               <th>Product Detail</th>
+               <th colspan="2">Quantity</th>
+               <th>Amount</th>
+           </tr>
+           <tr>
+               <td>
+                   <div class="cart-item">
+                       <img src="images/products/nikeW-1.png">
+                       <div class="info">
+                           <p>Nike Fall Era</p>
+                           <a href="#">Remove</a>
+                       </div>
+                   </div>
+               </td>
+               <td colspan="2"><input type="number" value="1"></td>
+               <td>&#8377 8699</td>
+           </tr>
+           <tr>
+            <td>
+                <div class="cart-item">
+                    <img src="images/products/adidas-2.png">
+                    <div class="info">
+                        <p>Adidas Yanzee</p>
+                        <a href="#">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td colspan="2"><input type="number" value="1"></td>
+            <td>&#8377 7700</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-item">
+                    <img src="images/products/oni-1.png">
+                    <div class="info">
+                        <p>Onitsuka Baki</p>
+                        <a href="#">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td colspan="2"><input type="number" value="1"></td>
+            <td>&#8377 6350</td>
+        </tr>
+       </table>
+       <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtoal</td>
+                <td>&#8377 22,737</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>&#8377 100</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>&#8377 22,837</td>
+            </tr>
+        </table>
+    </div>
+   </div>
+  
+  <!--Footer-->
+  <div class="Footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3>Download Our App</h3>
+          <p>Download App for android and ios devices</p>
+          <div class="store">
+            <a href="https://www.apple.com/in/shop" target="_blank"><i id="apple" class="fa fa-apple icon-large" aria-hidden="true"></i></a>
+            <a href="https://play.google.com/store?utm_source=apac_med&utm_medium=hasem&utm_content=Apr0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-in-1003227-med-hasem-py-Evergreen-Apr0121-Text_Search_BKWS-BKWS%7cONSEM_kwid_43700058906740795_creativeid_480977735237_device_c&gclid=EAIaIQobChMI6rb9mOa58QIV35VLBR05VQA8EAAYASAAEgJNh_D_BwE&gclsrc=aw.ds" target="_blank"><i id="play" class="fa fa-play icon-4x" aria-hidden="true"></i></a>
+            
+          </div>
+        </div>
+        <div class="footer-col-2">
+          <img src="images/logo2_black.png" >
+          <p>Our puspose is to make sustainably pleasure shopping
+            experince for all the shoe lovers around the globe
+          </p>
+        </div>
+        <div class="footer-col-3">
+          <h3>Useful Links</h3>
+          <ul>
+            <li>Coupons</li>
+            <li>Blog Post</li>
+            <li>Return policy</li>
+            <li>About Founder</li>
+          </ul>
+        </div>
+        <div class="footer-col-4">
+          <h3>Follow us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+            <li>Youtube</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+        <div class="copyright">
+          <h3>Copyright 2021 - AC web divisions</h3>
+        </div>
+    </div>
+  </div>
+  <script>
+    var menuItems = document.getElementById("menuItems");
+    menuItems.style.maxHeight = "0px";
+    function menuToggle(){
+      if(menuItems.style.maxHeight=="0px"){
+        menuItems.style.maxHeight="200px";
+      }
+      else{
+        menuItems.style.maxHeight="0px";
+      }
+    }
+  </script>
+
+  <!---Product image changing-->
+  </body>
+</html>
