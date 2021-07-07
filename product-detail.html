@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="Z:\Web Dev\e-commerce\style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600;700&display=swap" rel="stylesheet"> 
   </head>
   <body>
@@ -27,7 +27,7 @@
                 </ul>
             </nav>
             <img src="images/cart.png" width="20px" height="20px" >
-            <img src="images/menu.png" class="menu-icon" onclick="menuToggle()">
+            <!-- <img src="images/menu.png" class="menu-icon" onclick="menuToggle()"> -->
         </div>
     </div>
   </div>
@@ -42,18 +42,18 @@
                         <img src="images/featured-3.webp" class="smallImage">
                     </div>
                     <div class="small-container-col ">
-                        <img src="images/gallery2.webp" class="smallImage">
+                        <!-- <img src="images/gallery2.webp" class="smallImage"> -->
                     </div>
                     <div class="small-container-col" >
-                        <img src="images/gallery3.webp" class="smallImage">
+                        <!-- <img src="images/gallery3.webp" class="smallImage"> -->
                     </div>
                     <div class="small-container-col">
-                        <img src="images/gallery4.webp" class="smallImage">
+                        <!-- <img src="images/gallery4.webp" class="smallImage"> -->
                     </div>
                 </div>
             </div>
             <div class="col2">
-                <h3>Nabaiji by Decathlon</h3>
+                <h3 id="product_name">xyz</h3>
                 <p>&#8377; 899</p>
                 <select>
                     <option>size(UK)</option>
@@ -181,6 +181,34 @@
     </div>
   </div>
   <script>
+    const data = {
+      1: {
+        images: [
+          'images/featured-3.webp',
+          'images/gallery2.webp',
+          'images/gallery3.webp',
+          'images/gallery3.webp',
+          'images/gallery4.webp'
+        ],
+        name: 'Nabaiji by Decathlon',
+        price: '899',
+        description: 'A pair of black & blue aqua aerobics sports shoes, has regular styling, slip-on detail'
+      },
+      2: {
+        images: [
+          'images/featured-3.webp',
+          'images/gallery2.webp',
+          'images/gallery3.webp',
+          'images/gallery3.webp',
+          'images/gallery4.webp'
+        ],
+        name: 'hello world',
+        price: '899',
+        description: 'A pair of black & blue aqua aerobics sports shoes, has regular styling, slip-on detail'
+      }
+    };
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
     var menuItems = document.getElementById("menuItems");
     menuItems.style.maxHeight = "0px";
     function menuToggle(){
@@ -191,6 +219,7 @@
         menuItems.style.maxHeight="0px";
       }
     }
+    document.getElementById('product_name').innerText = data[productId].name;
   </script>
 
   <!---Product image changing-->
@@ -200,15 +229,15 @@
       smallImage[0].onclick = function(){
           ProductImage.src = smallImage[0].src;
       }
-      smallImage[1].onclick = function(){
-          ProductImage.src = smallImage[1].src;
-      }
-      smallImage[2].onclick = function(){
-          ProductImage.src = smallImage[2].src;
-      }
-      smallImage[3].onclick = function(){
-          ProductImage.src = smallImage[3].src;
-      }
+      // smallImage[1].onclick = function(){
+      //     ProductImage.src = smallImage[1].src;
+      // }
+      // smallImage[2].onclick = function(){
+      //     ProductImage.src = smallImage[2].src;
+      // }
+      // smallImage[3].onclick = function(){
+      //     ProductImage.src = smallImage[3].src;
+      // }
   </script>
   </body>
 </html>
